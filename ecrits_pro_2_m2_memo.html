@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — Futur ou conditionnel ?</title>
+<style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}</style></head>
+<body>
+<header class="bandeau"><div class="wrap">
+ <div class="chapitre">Écrits professionnels 2/6 <span>/</span> Module 2</div><h1>Futur ou conditionnel ?</h1><p class="sous">Fiche mémo — engagement, politesse, hypothèse</p>
+</div></header>
+<div class="wrap">
+<a class="dl" href="EP_2_M2_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+
+<h2><span class="num">1 ·</span>Le test qui tranche</h2>
+<div class="carte">
+<p>À l'oral, « j'enverrai » et « j'enverrais » se prononcent presque de la même façon. À l'écrit, la différence est visible et elle change le sens.</p>
+<div class="enc"><span class="t">LE TEST EN UNE LIGNE</span>Remplacez <b>je</b> par <b>nous</b>. « Nous enverr<b>ons</b> » : c'est le <b>futur</b>, écrivez <b>-rai</b>. « Nous enverr<b>ions</b> » : c'est le <b>conditionnel</b>, écrivez <b>-rais</b>.</div>
+</div>
+
+<h2><span class="num">2 ·</span>Quel temps pour quel message ?</h2>
+<div class="carte">
+<table><thead><tr><th>Ce que vous voulez dire</th><th>Temps</th><th>Exemples en relation client</th></tr></thead><tbody>
+<tr><td><b>Un engagement ferme</b> : ce qui est certain et dépend de vous ou de la loi</td><td><b>Futur</b></td><td>Je vous <b>enverrai</b> votre bon de retour dans l'heure · Nous vous <b>rembourserons</b> l'article retourné</td></tr>
+<tr><td><b>Une demande ou un souhait poli</b></td><td><b>Conditionnel</b></td><td>Je <b>voudrais</b> vous proposer un rendez-vous · Je vous <b>serais</b> reconnaissant de me transmettre votre numéro de commande</td></tr>
+<tr><td><b>Une possibilité, une hypothèse</b> : ce qui n'est pas acquis</td><td><b>Conditionnel</b></td><td>L'article <b>pourrait</b> être de nouveau disponible fin novembre · Cette solution <b>permettrait</b> de réduire vos frais de livraison</td></tr>
+<tr><td><b>Une information non confirmée</b></td><td><b>Conditionnel</b></td><td>Selon votre message, le colis <b>aurait</b> été déposé chez un voisin</td></tr>
+</tbody></table>
+<div class="enc al"><span class="t">LA RÈGLE DE PRUDENCE DU CONSEILLER</span>Ne mettez jamais au futur ce que vous ne maîtrisez pas. « Votre geste commercial <b>sera</b> accordé » est une promesse que vous ne pouvez pas faire : la décision revient au service concerné. Écrivez « votre demande <b>sera</b> étudiée » (certain) ou « une réponse vous <b>sera</b> adressée sous… » (certain).</div>
+</div>
+
+<h2><span class="num">3 ·</span>Après le « si » de condition : jamais de conditionnel</h2>
+<div class="carte">
+<table><thead><tr><th>Construction</th><th>Juste</th><th>Faux</th></tr></thead><tbody>
+<tr><td>si + présent → futur</td><td>Si vous <b>validez</b> votre commande avant midi, le colis <b>partira</b> aujourd'hui.</td><td>Si vous <s>validerez</s>…</td></tr>
+<tr><td>si + imparfait → conditionnel</td><td>Si vous <b>souhaitiez</b> modifier cette commande, je <b>pourrais</b> vous aider.</td><td>Si vous <s>souhaiteriez</s>…</td></tr>
+</tbody></table>
+<div class="enc ci"><span class="t">MOYEN MNÉMOTECHNIQUE</span>« Les <b>si</b> n'aiment pas les <b>-rais</b>. » Le conditionnel se place dans l'autre partie de la phrase, jamais juste après « si ».</div>
+</div>
+
+<h2><span class="num">4 ·</span>Les futurs qui piègent</h2>
+<div class="carte">
+<table><thead><tr><th>Verbe</th><th>Futur (je)</th><th>Conditionnel (je)</th><th>À ne pas écrire</th></tr></thead><tbody>
+<tr><td>envoyer</td><td>j'<b>enverrai</b></td><td>j'<b>enverrais</b></td><td>envoierai</td></tr>
+<tr><td>pouvoir</td><td>je <b>pourrai</b></td><td>je <b>pourrais</b></td><td>pourai</td></tr>
+<tr><td>recevoir</td><td>je <b>recevrai</b></td><td>je <b>recevrais</b></td><td>receverai</td></tr>
+<tr><td>voir</td><td>je <b>verrai</b></td><td>je <b>verrais</b></td><td>voirai</td></tr>
+<tr><td>appeler / rappeler</td><td>je <b>rappellerai</b></td><td>je <b>rappellerais</b></td><td>rappelerai</td></tr>
+<tr><td>devoir</td><td>je <b>devrai</b></td><td>je <b>devrais</b></td><td>doiverai</td></tr>
+<tr><td>être</td><td>je <b>serai</b></td><td>je <b>serais</b></td><td>—</td></tr>
+</tbody></table>
+</div>
+
+<h2><span class="num">5 ·</span>À retenir</h2>
+<div class="carte">
+<ol class="q"><li>Remplacez « je » par « nous » : -rons = futur (-rai), -rions = conditionnel (-rais).</li><li>Futur pour un engagement certain ; conditionnel pour la politesse et pour ce qui n'est pas acquis.</li><li>Après le « si » de condition, jamais de conditionnel.</li><li>On ne promet jamais au futur une décision que l'on ne prend pas soi-même, comme l'accord d'un geste commercial.</li></ol>
+</div>
+
+
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</div>
+</body></html>
